@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\obj\Debug\
+C:\Users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\obj\Debug\
 ShopingListDesktop
 none
 false
 DEBUG;TRACE
-c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\View\App.xaml
-4-55216247
+C:\Users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\View\App.xaml
+51016499485
 
-21-400246031
-73-900357186
-View\AddProduct.xaml;View\ListAdd.xaml;View\MainWindow.xaml;View\ShopingList.xaml;
+241656803182
+73511835277
+View\AddProduct.xaml;View\ListAdd.xaml;View\MainWindow.xaml;View\ProductEdit.xaml;View\ShopingList.xaml;
 
 False
 

@@ -1,4 +1,5 @@
-﻿using ShopingListDesktop.ModelView;
+﻿using ShopingListDesktop.Model;
+using ShopingListDesktop.ModelView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,15 +17,14 @@ using System.Windows.Shapes;
 namespace ShopingListDesktop.View
 {
     /// <summary>
-    /// Interaction logic for ShopingList.xaml
+    /// Interaction logic for ProductEdit.xaml
     /// </summary>
-    public partial class ShopingList : Window
+    public partial class ProductEdit : Window
     {
-        public ShopingList(string name)
+        public ProductEdit(Product product)
         {
-            this.DataContext = new ShopingListView(name);
+            this.DataContext = new ProductEditView(product);
             InitializeComponent();
-
         }
     }
 }

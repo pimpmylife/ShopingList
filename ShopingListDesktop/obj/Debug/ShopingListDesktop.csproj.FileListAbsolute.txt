@@ -27,8 +27,9 @@ c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDes
 c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\bin\Debug\EntityFramework.xml
 c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\bin\Debug\EntityFramework.SqlServer.xml
 c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\bin\Debug\System.Data.SQLite.xml
-c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\obj\Debug\ShopingListDesktop.csprojResolveAssemblyReference.cache
 c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\obj\Debug\View\ShopingList.g.cs
 c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\obj\Debug\View\ShopingList.baml
 c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\obj\Debug\View\AddProduct.g.cs
 c:\users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\obj\Debug\View\AddProduct.baml
+C:\Users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\obj\Debug\View\ProductEdit.g.cs
+C:\Users\mateusz.brzozowski\documents\visual studio 2015\Projects\ShopingListDesktop\ShopingListDesktop\obj\Debug\View\ProductEdit.baml

@@ -16,12 +16,16 @@ namespace ShopingListDesktop.ModelView
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private ObservableCollection<Product> products;
+        private Product item;
         private int jajka;
-        public ShopingListView()
+        private string name;
+        public ShopingListView(string productName)
         {
+            item = new Product();
+            name = productName;
             products = new ObservableCollection<Product>();
             Product a = new Product();
-            a.isInBasket = false;
+            a.isInBasket = true;
             a.name = "marchew";
             a.size = "2 kg";
             products.Add(a);
@@ -35,9 +39,16 @@ namespace ShopingListDesktop.ModelView
                 products = value;
                 OnPropertyChanged("Products");
             }
-
         }
-
+        public Product SelectedItemProduct
+        {
+            get { return item; }
+            set
+            {
+                item = value;
+                OnPropertyChanged("SelectedItemProduct");
+            }
+        }
 
         public int SelectedProduct
         {
@@ -48,6 +59,26 @@ namespace ShopingListDesktop.ModelView
                 OnPropertyChanged("SelectedProduct");
             }
         }
+        public ICommand EditProduct
+        {
+            get { return new RelayCommand(EditProductFromList, ProductIsSelected); }
+        }
+
+        private void EditProductFromList()
+        {
+            ProductEdit win = new ProductEdit(item);
+            win.Show();
+        }
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                OnPropertyChanged("Name");
+            }
+        }
+
         public ICommand NewProduct
         {
             get { return new RelayCommand(AddProductToList); }
@@ -68,13 +99,30 @@ namespace ShopingListDesktop.ModelView
         private void DeleteProductFromList()
         {
             MessageBox.Show("Usunieto wybrany produkt"); 
-            //TODO usunac produkt
+            //TODO usunac produkt z bazy danych 
         }
 
         private void AddProductToList()
         {
             AddProduct win = new AddProduct();
             win.Show();
+        }
+
+        public ICommand DeleteList
+        {
+            get { return new RelayCommand(DeleteSelectedList); }
+        }
+
+        private void DeleteSelectedList()
+        {
+            if(products.Count == 0 )
+            {
+                //TODO delte list
+            }
+            else
+            {
+                MessageBox.Show("Lista musi być pusta by ją usunąć, usun wszystkie jej elementy");
+            }
         }
 
         private void OnPropertyChanged(string name)

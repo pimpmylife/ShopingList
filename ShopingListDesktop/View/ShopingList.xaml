@@ -5,16 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopingListDesktop.ModelView"
         mc:Ignorable="d"
-        Title="ShopingList" Height="300" Width="300">
-    <Window.DataContext>
-        <local:ShopingListView/>
-    </Window.DataContext>
-    <Grid>
-        <DataGrid x:Name="dataGrid" ItemsSource="{Binding Products}" SelectedIndex="{Binding SelectedProduct}" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Height="150" Width="252" CanUserResizeRows="False"  CanUserDeleteRows="False" CanUserAddRows="False" />
-        <Button x:Name="button" Command="{Binding NewProduct}" Content="Dodaj produkt" HorizontalAlignment="Left" Margin="21,182,0,0" VerticalAlignment="Top" Width="119"/>
-        <Button x:Name="button1" Command="{Binding DeleteProduct}" Content="Usuń produkt" HorizontalAlignment="Left" Margin="21,222,0,0" VerticalAlignment="Top" Width="119"/>
-        <Button x:Name="button2" Content="Edytuj produkt" HorizontalAlignment="Left" Margin="161,182,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button x:Name="button3" Content="Usun Liste" HorizontalAlignment="Left" Margin="161,222,0,0" VerticalAlignment="Top" Width="75"/>
+        Title="ShopingList" Height="469.042" Width="300">
+
+    <Grid Margin="0,0,0,4">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding Products}" SelectedIndex="{Binding SelectedProduct}" SelectedItem="{Binding SelectedItemProduct}" HorizontalAlignment="Left" Margin="30,60,0,148" Width="252" CanUserResizeRows="False"  CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True"/>
+        <Button x:Name="button" Command="{Binding NewProduct}" Content="Dodaj produkt" HorizontalAlignment="Left" Margin="26,351,0,0" VerticalAlignment="Top" Width="119" Height="22"/>
+        <Button x:Name="button1" Command="{Binding DeleteProduct}" Content="Usuń produkt" HorizontalAlignment="Left" Margin="26,391,0,0" VerticalAlignment="Top" Width="119" Height="22"/>
+        <Button x:Name="button2" Command="{Binding EditProduct}" Content="Edytuj produkt"  HorizontalAlignment="Left" Margin="166,351,0,0" VerticalAlignment="Top" Width="112" Height="22"/>
+        <Button x:Name="button3" Command="{Binding DeleteList}" Content="Usun Liste" HorizontalAlignment="Left" Margin="166,391,0,0" VerticalAlignment="Top" Width="75" Height="22"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="98,10,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="118" Height="16"/>
 
     </Grid>
 </Window>

@@ -15,10 +15,11 @@ namespace ShopingListDesktop.ModelView
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<ListModel> listy;
+        private ListModel produkt;
 
         public MainWindowView()
         {
-            
+            produkt = new ListModel();
             listy = new ObservableCollection<ListModel>();
             ListModel a = new ListModel();
             a.id = 1;
@@ -54,11 +55,12 @@ namespace ShopingListDesktop.ModelView
         }
         public ListModel ShowList
         {
-            get { return null; }
+            get { return produkt; }
             set
             {
+                produkt = value;
                 OnPropertyChanged("ShowList");
-                ShopingList win = new ShopingList();
+                ShopingList win = new ShopingList(produkt.name);
                 win.Show();
                
             }
